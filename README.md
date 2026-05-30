@@ -9,6 +9,10 @@
 
 LegalEase AI is a **RAG-powered contract analyzer** that helps non-lawyers understand dense legal documents — employment contracts, NDAs, lease agreements, SaaS terms — in plain English. Built entirely on free services.
 
+**Access it here: [Legalease AI Application](https://legalease-ai1.streamlit.app/)**
+
+📖 **Not a developer? Read the [User Guide](USER_GUIDE.md) instead.**
+
 ---
 
 ## 🎯 The Problem
@@ -65,46 +69,6 @@ PDF Upload
 
 **Key design decision:** Chunking by clause boundary (numbered sections, ALL CAPS headings, "Section X") instead of arbitrary token windows preserves legal meaning. A clause split mid-sentence loses context; a clause chunked as a unit retains it.
 
----
-
-## 🚀 Quick Start
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/YOUR_USERNAME/legalease-ai.git
-cd legalease-ai
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Get a free Groq API key
-Sign up at [console.groq.com](https://console.groq.com) — it's free with generous limits.
-
-### 4. Add your API key
-```toml
-# .streamlit/secrets.toml
-GROQ_API_KEY = "gsk_your_key_here"
-```
-
-### 5. Run
-```bash
-streamlit run app.py
-```
-
----
-
-## ☁️ Deploy Free (Streamlit Cloud)
-
-1. Push to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your repo → select `app.py`
-4. Add `GROQ_API_KEY` under **Secrets**
-5. Deploy — you get a public URL instantly
-
----
 
 ## 🧰 Tech Stack
 
